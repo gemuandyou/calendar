@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="calendar.css">
+</head>
+
+<body>
+    <div id="calendar">
+    </div>
+    <script src="calendar.js"></script>
+    <script>
+        var calendar = new GMCalendar(document.getElementById('calendar'), {
+            width: '300px',
+            height: '200px',
+            redTip: [{date: '2018-7-19', value: 3}, {date: '2018-7-19', value: 3}, {date: '2018-7-19', value: 3}, {date: '2018-7-19', value: 3}],
+            greenTip: ['2018-7-19', '2018-7-20', {date: '2018-7-13', value: 1}],
+            blueTip: ['2018-7-19', '2018-7-22', '2018-7-13'],
+        });
+
+        calendar.on('dateClick', function (params) {
+            console.log(params);
+        });
+    </script>
+</body>
+
+</html>
